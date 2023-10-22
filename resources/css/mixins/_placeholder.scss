@@ -1,0 +1,45 @@
+@mixin hidePlaceholder() {
+    &:-moz-placeholder {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    &:-ms-input-placeholder {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    &::-moz-placeholder {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    &::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0);
+    }
+}
+
+@mixin placeholderColor($c) {
+    &:-moz-placeholder {
+        color: $c;
+    }
+
+    &:-ms-input-placeholder {
+        color: $c;
+    }
+
+    &::-moz-placeholder {
+        color: $c;
+    }
+
+    &::-webkit-input-placeholder {
+        color: $c;
+    }
+}
+
+@mixin autocompleteColor($background, $color, $borderColor) {
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px $background inset;
+        -webkit-text-fill-color: $color;
+        caret-color: $color;
+        border-color: $borderColor !important;
+        font-style: normal;
+    }
+}

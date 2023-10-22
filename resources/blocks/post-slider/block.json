@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ma/post-slider",
+  "version": "0.1.0",
+  "title": "Post slider",
+  "keywords": [
+    "news",
+    "nyhed"
+  ],
+  "category": "media",
+  "description": "Tilføjer en indlægskarrusel med kategori filtrering",
+  "attributes": {},
+  "styles": [
+    {
+      "name": "white",
+      "label": "Hvid",
+      "isDefault": true
+    },
+    {
+      "name": "light",
+      "label": "Lysegrøn"
+    },
+    {
+      "name": "dark",
+      "label": "Mørkegrøn"
+    }
+  ],
+  "supports": {
+    "anchor": true,
+    "mtSpacing": true
+  },
+  "example": {
+    "viewportWidth": 1320,
+    "attributes": {
+      "tagline": "Nyheder",
+      "title": "Hold dig opdateret om hvad der sker hos os",
+      "termId": 0
+    }
+  },
+  "textdomain": "ma",
+  "viewScript": "file:./post-slider.js",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

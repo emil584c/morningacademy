@@ -1,0 +1,44 @@
+@import '../../css/block-editor/block-helper';
+
+.mt-post-slider-posts-container {
+
+    .block-editor-block-list__layout {
+        gap: 24px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include break(1100) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 40px;
+        }
+
+        @include break(mobilelandscape) {
+            grid-gap: 24px;
+        }
+
+        @include break(650) {
+            grid-gap: 40px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .wp-block-sdf-post-slider-post {
+        position: relative;
+    }
+
+    &__button-wrapper {
+        pointer-events: none;
+    }
+
+    &:not(.is-selected):not(.has-child-selected) {
+        .mt-post-slider-post {
+            &:not(:nth-of-type(-n+3)) {
+                display: none !important;
+            }
+        }
+
+        .block-list-appender {
+            display: none;
+        }
+    }
+}

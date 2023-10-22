@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ma/blog-posts-archive",
+  "version": "0.1.0",
+  "title": "Blog Post Archive",
+  "category": "theme",
+  "description": "Viser et indlæg arkiv med filtreringsmuligheder og pagination",
+  "attributes": {
+    "type": {
+      "type": "string",
+      "default": "post"
+    }
+  },
+  "supports": {
+    "anchor": true
+  },
+  "example": {
+    "viewportWidth": 520
+  },
+  "textdomain": "ma",
+  "viewScript": [
+    "file:./post-archive.js",
+    "file:./post-archive/ProgressBar.js"
+  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "renderView": "post-archive",
+  "style": "file:./style-index.css"
+}

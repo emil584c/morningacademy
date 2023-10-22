@@ -1,0 +1,4 @@
+# Deny read access to all .lock files as well as composer.json
+<FilesMatch ".lock$|^composer.json$">
+    Require all denied
+</FilesMatch>

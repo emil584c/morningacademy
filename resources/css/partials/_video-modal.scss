@@ -1,0 +1,107 @@
+body.open-video {
+    div.video-modal {
+        visibility: visible;
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 1;
+
+        @include break(980) {
+            width: 90%;
+        }
+    }
+
+    div.video-overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+body.close-video {
+    div.video-modal {
+        transform: translateX(-50%) translateY(calc(-50% - 300px));
+        opacity: 0;
+        background: white;
+
+        @include break(980) {}
+
+        @include break(mobile) {}
+
+        .video-modal-content {
+            background: #FFF;
+        }
+    }
+}
+
+div.video-modal {
+    width: 70%;
+    height: 70%;
+    left: 50%;
+    transform: translateX(-50%) translateY(30%);
+    top: 50%;
+    position: fixed;
+    background: black;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(black, .16);
+    z-index: 999999;
+    transition: all .4s ease;
+    visibility: hidden;
+    overflow: hidden;
+
+    @include break(980) {
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include break(mobile) {
+        height: 300px;
+    }
+
+    .video-modal-content {
+        width: 100%;
+        height: 100%;
+        transition: all .3s ease;
+        background: black;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            transition: all .3s ease;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            transition: all .3s ease;
+            object-fit: cover;
+        }
+    }
+
+}
+
+div.video-overlay {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 99999;
+    left: 0px;
+    height: 100vh;
+    background: rgba(black, .8);
+    transition: all .3s ease;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.video-modal-close-button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url("~img/icons/close-orange.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}

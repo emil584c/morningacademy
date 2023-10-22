@@ -1,0 +1,70 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "ma/text-section",
+    "version": "0.1.0",
+    "title": "Text Section",
+    "category": "morningtrain",
+    "description": "Add a text section.",
+    "attributes": {
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        },
+        "title": {
+            "type": "string"
+        },
+        "buttonTypes": {
+            "type": "array",
+            "default": [
+                "underline-arrow"
+            ]
+        }
+    },
+    "supports": {
+        "mtSpacing": true
+    },
+    "providesContext": {
+        "button/types": "buttonTypes"
+    },
+    "example": {
+        "viewportWidth": 1920,
+        "attributes": {
+            "title": "Godt design fanger opmærksomheden\nog skaber genkendelighed",
+            "buttonTypes": [
+                "underline-arrow"
+            ],
+            "className": "mtSpacing-top-medium mtSpacing-bottom-medium"
+        },
+        "innerBlocks": [
+            {
+                "name": "core/paragraph",
+                "attributes": {
+                    "content": "Lorem ipsum dolor sit amet consectetur. Cursus vulputate est pharetra integer eget. Sit eget elementum eu tortor tincidunt placerat id aliquet. Sit feugiat nisl massa vitae vitae id. Aenean risus pellentesque tellus sed nulla commodo eros eu amet."
+                }
+            },
+            {
+                "name": "core/paragraph",
+                "attributes": {
+                    "content": "Odio lectus mattis egestas eu fringilla posuere. Nulla faucibus feugiat tristique quis. Sed sagittis elementum porttitor eget enim in risus est consequat."
+                }
+            },
+            {
+                "name": "core/paragraph",
+                "attributes": {
+                    "content": "Odio lectus mattis egestas eu fringilla posuere. Nulla faucibus feugiat tristique quis. Sed sagittis elementum porttitor eget enim in risus est consequat."
+                }
+            },
+            {
+                "name": "ma/button",
+                "attributes": {
+                    "text": "Læs mere"
+                }
+            }
+        ]
+    },
+    "textdomain": "ma",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

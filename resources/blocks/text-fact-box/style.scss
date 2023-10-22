@@ -1,0 +1,64 @@
+@import '../../css/block-editor/block-helper';
+
+.mt-text-fact-box {
+    max-width: 400px;
+
+    &__divider {
+        width: 64px;
+        height: 1px;
+        background-color: $c-black;
+    }
+
+    &__text-container {
+        padding-top: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        max-width: 400px;
+
+        p {
+            @include fontSize(15px);
+        }
+    }
+
+    @include break(mobile) {
+
+        .mt-text-fact-box__text-container {
+            padding-top: 32px;
+
+            p {
+                font-size: 14px !important;
+            }
+        }
+    }
+}
+
+.dark-mode-animating {
+    .mt-text-fact-box__text-container {
+
+        h4,
+        p,
+        ul,
+        ol {
+            transition: color $darkModeAnimationDuration $darkModeAnimationEasing;
+        }
+    }
+}
+
+.dark-mode {
+    .mt-text-fact-box__text-container {
+        h4 {
+            color: $c-white;
+        }
+
+        p,
+        ul,
+        ol {
+            color: $c-text-tertiary;
+        }
+    }
+
+    .mt-text-fact-box__divider {
+        background-color: $c-white;
+    }
+}

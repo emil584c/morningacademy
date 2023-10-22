@@ -1,0 +1,30 @@
+.wp-block-post-content,
+.is-root-container {
+
+    >.wp-block-paragraph,
+    >.wp-block-list {
+        max-width: var(--mt--container--width, 1280px);
+        margin: 32px auto;
+
+        @include break(laptop) {
+            max-width: var(--mt--container--width--laptop, 960px);
+        }
+
+        @include break(tablet) {
+            max-width: var(--mt--container--width--tablet, 720px);
+        }
+
+        @include break(mobile) {
+            max-width: var(--mt--container--width--mobile, 480px);
+            width: 90%;
+        }
+    }
+
+    >.wp-block-list {
+        padding-left: 24px;
+
+        li:not(:first-child) {
+            margin-top: 8px;
+        }
+    }
+}

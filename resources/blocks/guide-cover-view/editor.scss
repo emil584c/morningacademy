@@ -1,0 +1,56 @@
+@import '../../css/block-editor/block-helper';
+
+.mt-price-packages{
+    justify-content: center;
+
+    &__box-container {
+        display: block;
+    }
+
+    .block-editor-block-list__layout {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+
+        @include break(tabletlandscape) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include break(mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &:not(.is-selected):not(.has-child-selected) {
+        .block-list-appender {
+            display: none;
+        }
+    }
+    .block-editor-button-block-appender{
+        box-shadow: inset 0 0 0 1px #fafafa;
+        svg {
+            fill: #fafafa;
+        }
+    }
+
+    .mt-message {
+
+        &__text {
+            color: black;
+        }
+    }
+
+    &.is-style-3-column-grid {
+        
+        .block-editor-block-list__layout {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &.is-style-2-column-grid {
+    
+        .block-editor-block-list__layout {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+

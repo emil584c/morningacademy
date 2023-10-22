@@ -1,0 +1,56 @@
+.mt-message {
+    $self: &;
+
+    &__text {
+        padding: 16px 8px;
+        font-size: 14px;
+    }
+
+    //////////////////////////////
+    // Positions
+    //////////////////////////////
+
+    // Top
+    &--position-top {
+        margin-bottom: 40px;
+    }
+
+    // Bottom
+    &--position-bottom {
+        margin-top: 40px;
+    }
+
+    //////////////////////////////
+    // Status
+    //////////////////////////////
+
+    // Info
+    &__text {
+        background: #e8f5f9;
+        border-left: 4px solid #007cba;
+    }
+
+    // Warning
+    &--status-warning {
+        #{$self}__text {
+            background: #fef8e7;
+            border-color: #f0b849;
+        }
+    }
+
+    // Error
+    &--status-error {
+        #{$self}__text {
+            background: #f8ebea;
+            border-color: #cd423b;
+        }
+    }
+
+    // Success
+    &--status-success {
+        #{$self}__text {
+            background: #eef6ee;
+            border-color: #4db54f;
+        }
+    }
+}

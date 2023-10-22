@@ -1,0 +1,20 @@
+@import '../../../css/block-editor/block-helper';
+
+.mt-button-grid {
+    gap: 8px !important;
+
+    &__item {
+        background: $c-box-background;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $c-box-background;
+
+        &--active {
+            border-color: #2271b1;
+        }
+    }
+}
+
+.mt-buttons {}

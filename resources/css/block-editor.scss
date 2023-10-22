@@ -1,0 +1,38 @@
+@import './mixins/all';
+@import './variables/all';
+@import './helpers/all';
+
+.editor-styles-wrapper {
+    font-family: $font_prim;
+    font-size: $fs_text;
+    line-height: $lh_text;
+    color: $c-text;
+    font-weight: $fw_regular;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+
+    .edit-post-visual-editor__post-title-wrapper {
+        margin-top: 0 !important;
+        background: $c-background-secondary;
+        z-index: 999;
+        position: relative;
+    }
+
+    .is-root-container>.wp-block {
+        z-index: 2;
+        position: relative;
+    }
+
+    .wp-block-post-content {
+        overflow: hidden;
+    }
+
+    @import "partials/all";
+    @import "modules/spacing";
+    @import "modules/core-blocks";
+    @import "modules/typography";
+}
+
+@import "block-editor/all";
+@import "standard-block-customization/all";

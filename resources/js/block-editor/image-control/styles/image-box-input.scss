@@ -1,0 +1,57 @@
+.image-box-input {
+    $self: &;
+    position: relative;
+    min-height: 50px;
+    min-width: 50px;
+
+    &__overlay {
+        pointer-events: none;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &__overlay-text {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        transform: translateY(-50%);
+    }
+
+    &__remove {
+        z-index: 2;
+        position: absolute;
+        top: 12px;
+        right: 12px;
+    }
+
+    &__fallback {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        background-color: #f0f0f0;
+
+        &:before {
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            left: 12px;
+            top: 12px;
+            border: 2px dashed grey;
+        }
+    }
+
+    &:hover {
+        #{$self}__overlay {
+            display: block;
+        }
+    }
+}

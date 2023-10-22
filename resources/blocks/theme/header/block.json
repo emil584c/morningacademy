@@ -1,0 +1,19 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "ma/header",
+    "version": "0.1.0",
+    "title": "Header",
+    "category": "morningtrain",
+    "parent": [],
+    "description": "",
+    "attributes": {},
+    "supports": {},
+    "textdomain": "ma",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css",
+    "viewScript": "file:./header-view-script.js",
+    "renderView": "header",
+    "phpScript": "file:./header-view-composing.php"
+}

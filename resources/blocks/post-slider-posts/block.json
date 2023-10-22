@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ma/post-slider-posts",
+  "version": "0.1.0",
+  "title": "Post slider posts",
+  "keywords": [
+    "news",
+    "nyhed"
+  ],
+  "category": "media",
+  "icon": "admin-page",
+  "description": "Tilføjer dynamisk hentede indlæg til slideren",
+  "parent": [
+    "ma/post-slider"
+  ],
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "object"
+    },
+    "linkText": {
+      "type": "string"
+    },
+    "termId": {
+      "type": "integer"
+    }
+  },
+  "supports": {},
+  "example": {
+    "viewportWidth": 1320
+  },
+  "textdomain": "ma",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "renderView": "post-slider/post-slider"
+}

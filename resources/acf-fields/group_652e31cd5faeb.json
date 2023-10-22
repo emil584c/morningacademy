@@ -1,0 +1,161 @@
+{
+    "key": "group_652e31cd5faeb",
+    "title": "Guides",
+    "fields": [
+        {
+            "key": "field_652e3529feeaa",
+            "label": "Guide video",
+            "name": "guide_video",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6530d89053d90",
+            "label": "Guide beskrivelse",
+            "name": "guide_description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_652e8176ed7b3",
+            "label": "Baggrund cirkel farve",
+            "name": "background_circle_color",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#F8CFB1": "Sand",
+                "#FEC539": "Gul",
+                "#1B1AF5": "Blå",
+                "#09684B": "Grøn",
+                "#FF9452": "Orange",
+                "#F4E1FD": "Pink"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_652e3209e3140",
+            "label": "Guide fuldt størrelse billede",
+            "name": "guide_full_image",
+            "type": "image",
+            "instructions": "OBS! Hvis man vælger et billede her, vil alt ovenstående indhold, bortset fra titel, blive ignoreret (Kan bruges hvis man bare vil have et billede på ens guide)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6530f3d986a27",
+            "label": "Vis guide for alle",
+            "name": "public",
+            "type": "true_false",
+            "instructions": "Skal den vises for alle brugere?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Ja",
+            "ui_off_text": "Nej"
+        },
+        {
+            "key": "field_6530dc0237ef4",
+            "label": "Vælg bruger",
+            "name": "guide_user",
+            "type": "user",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6530f3d986a27",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "guide"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1697707136
+}

@@ -1,0 +1,26 @@
+{
+  "name": "wp-blockeditor-utilities",
+  "version": "1.0.0",
+  "description": "Tools for easier WordPress Block development",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@backuptrain.dk:7331/internal-projects/node-modules/wp-blockeditor-utilities.git"
+  },
+  "keywords": [
+    "morningtrain",
+    "wp",
+    "blocks"
+  ],
+  "author": "mh@morningtrain.dk",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "@wordpress/rich-text": "^5.17.0",
+    "@wordpress/icons": "^9.10.0",
+    "classnames": "^2.3",
+    "@wordpress/i18n": "^4.21.0"
+  }
+}

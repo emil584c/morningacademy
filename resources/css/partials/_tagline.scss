@@ -1,0 +1,14 @@
+.mt-tagline,
+.tagline {
+    font-family: $font_prim;
+    color: $c-text-secondary;
+    font-weight: $fw_semibold;
+    @include fontSize(14px);
+    text-transform: uppercase;
+    line-height: 1.45;
+    letter-spacing: 1.68px;
+
+    @include break(1400) {
+        @include fontSize(12px);
+    }
+}

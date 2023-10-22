@@ -1,0 +1,122 @@
+.post-search {
+    position: relative;
+
+    > .components-base-control {
+        margin-bottom: 0;
+
+        > .components-base-control__field {
+            margin-bottom: 0;
+        }
+    }
+
+    &__input-wrapper {
+        position: relative;
+
+        > .components-base-control {
+            margin-bottom: 8px !important;
+        }
+
+        .components-search-control__input {
+            background: $c-background-secondary !important;
+        }
+    }
+
+    &__selected-posts {
+
+    }
+
+    &__selected {
+        position: relative;
+        margin-top: 16px;
+    }
+
+    &__selected-text-input {
+        margin-top: 8px;
+    }
+
+    &__selected-text {
+        width: 100%;
+
+        b {
+            display: block;
+        }
+
+        span {
+            padding-right: 24px;
+            word-break: break-all;
+            display: block;
+        }
+    }
+
+    &__spinner {
+        background: $c-background-secondary;
+        height: 44px;
+        width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+
+        svg {
+            margin: 0 !important;
+        }
+    }
+
+    &__delete-icon {
+        position: absolute;
+        top: -1px;
+        right: 0;
+        z-index: 2;
+    }
+
+    &__actions {
+        position: absolute;
+        top: -1px;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        gap: 2px;
+        flex-shrink: 0;
+
+        button {
+            min-width: 20px;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+        }
+    }
+
+    &__results {
+        position: absolute;
+        z-index: 10;
+        top: 72px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-height: 200px;
+        background: white;
+        box-shadow: 0 3px 10px rgba(black, .1);
+        padding: 16px 0;
+        margin: 0;
+        overflow-y: auto;
+    }
+
+    &__result {
+        margin: 0;
+        cursor: pointer;
+        padding: 8px 16px;
+
+        &--add-link {
+            font-weight: $fw_semibold;
+        }
+    }
+
+    &--multiple {
+
+        .post-search__selected-text span {
+            padding-right: 66px;
+        }
+    }
+}

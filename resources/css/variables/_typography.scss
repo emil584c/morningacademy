@@ -1,0 +1,43 @@
+$fw_light: 300;
+$fw_regular: 400;
+$fw_medium: 500;
+$fw_semibold: 600;
+$fw_bold: 700;
+
+$lh_title: 1.2;
+$lh_h1: 1.04;
+$lh_h2: 1.12;
+$lh_h3: 1.16;
+
+$lh_text: 1.625;
+
+// Font size
+$fs_button: 16px;
+$fs_text: 16px;
+
+$fs_h1: 74px;
+$fs_h1-medium: 56px;
+$fs_h1-small: 48px;
+
+$fs_h2: 64px;
+$fs_h2-medium: 48px;
+$fs_h2-small: 40px;
+
+$fs_h3: 48px;
+$fs_h3-medium: 40px;
+$fs_h3-small: 32px;
+
+// TODO: Add correct font sizes for h4, h5 and h6
+$fs_h4: 22px;
+$fs_h4-medium: 20px;
+$fs_h4-small: 18px;
+
+$fs_h5: 18px;
+$fs_h5-medium: 18px;
+$fs_h5-small: 16px;
+
+$fs_h6: 16px;
+$fs_h6-medium: 16px;
+$fs_h6-small: 16px;
+
+$font_prim: var(--mt--font--primary), sans-serif;

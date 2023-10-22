@@ -1,0 +1,108 @@
+.swiper-button-prev,
+.swiper-button-next {
+    width: 43px;
+    height: 43px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    border: 1px solid $c_prim;
+    background-image: url('img/icons/swiper-arrow.svg');
+    background-size: 7.67px 13px;
+    background-repeat: no-repeat;
+    background-position: 53% 50%;
+    transition: background-color .15s ease, background-image .15s ease, opacity .15s ease;
+
+    &:not(.swiper-button-disabled) {
+        cursor: pointer;
+
+        &:hover {
+            background-color: $c_prim;
+            background-image: url('img/icons/swiper-arrow-white.svg');
+        }
+    }
+
+    &--white {
+        border-color: $c-white;
+        background-image: url('img/icons/swiper-arrow-white.svg');
+
+        &:not(.swiper-button-disabled) {
+            &:hover {
+                background-color: $c-white;
+                background-image: url('img/icons/swiper-arrow.svg');
+            }
+        }
+    }
+
+    &--simple {
+        background-image: url('img/icons/swiper-arrow-dark.svg');
+        border: 0;
+
+        &:not(.swiper-button-disabled) {
+            &:hover {
+                background-image: url('img/icons/swiper-arrow-dark.svg');
+                background-color: transparent;
+                border: 0;
+            }
+        }
+    }
+
+    &.absolute {
+        position: absolute;
+        z-index: 3;
+        left: -152px;
+        top: calc(50% - 21.5px);
+
+        &.swiper-button-next {
+            left: auto;
+            right: -152px;
+        }
+
+        @include break(1750) {
+            &.swiper-button-next {
+                right: -104px;
+            }
+        }
+
+        @include break(1600) {
+            left: -88px;
+
+            &.swiper-button-next {
+                right: -88px;
+            }
+        }
+
+        @include break(1500) {
+            height: 38px;
+            width: 38px;
+            left: -48px;
+            top: calc(50% - 19px);
+
+            &.swiper-button-next {
+                right: -48px;
+            }
+        }
+
+        @include break(1350) {
+            left: -19px;
+
+            &.swiper-button-next {
+                right: -19px;
+            }
+        }
+
+        @include break(1350) {
+            display: none;
+        }
+    }
+}
+
+.swiper-button-prev {
+    transform: scaleX(-1);
+}
+
+.swiper-button-disabled {
+    opacity: .5;
+}
+
+.swiper-button-lock {
+    display: none !important;
+}

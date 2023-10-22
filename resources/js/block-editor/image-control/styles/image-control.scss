@@ -1,0 +1,20 @@
+.image-control {
+    background: #f0f0f0;
+
+    &__preview-button {
+        max-height: 100%;
+    }
+
+    &__toggle-button {
+
+    }
+
+    &__remove-button {
+        display: block;
+        margin-top: 8px;
+
+        &.components-button.is-link {
+            margin-top: 8px;
+        }
+    }
+}

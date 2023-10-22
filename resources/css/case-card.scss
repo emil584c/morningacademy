@@ -1,0 +1,81 @@
+@import './block-editor/block-helper';
+
+.mt-case-card {
+
+    &__image-container {
+        aspect-ratio: 608/680;
+        background: $c-background-secondary;
+        border-radius: 8px;
+
+        img {
+            border-radius: inherit;
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__text-container {
+        margin-top: 22px;
+    }
+
+    &__tagline {
+        color: $c-text-secondary;
+        @include fontSize(13px);
+        font-style: $fw_regular;
+        line-height: 1.8;
+        margin-bottom: 4px;
+    }
+
+    &__title {
+        color: $c-title;
+        @include fontSize(24px);
+        font-weight: $fw_semibold;
+        line-height: 1.65;
+    }
+
+    @include break(laptop) {
+
+        .mt-case-card__text-container {
+            margin-top: 16px;
+        }
+
+        .mt-case-card__tagline {
+            margin-bottom: 0;
+        }
+
+        .mt-case-card__title {
+            @include fontSize(20px);
+        }
+    }
+
+    @include break(801, 1050) {
+
+        .mt-case-card__title {
+            @include fontSize(18px);
+        }
+    }
+}
+
+.mt-case-card-skeleton {
+
+    &__image {
+        aspect-ratio: 608/680;
+        background: $c-background-secondary;
+        border-radius: 8px;
+    }
+
+    &__tagline {
+        width: 40%;
+        height: 24px;
+        margin-bottom: 4px;
+        background: $c-background-secondary;
+    }
+
+    &__title {
+        width: 30%;
+        height: 40px;
+        background: $c-background-secondary;
+    }
+}

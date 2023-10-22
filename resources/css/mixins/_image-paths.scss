@@ -1,0 +1,14 @@
+@function getAssetsPath($name, $isBlock: false, $type: 'svg') {
+    @if $isBlock {
+        @return url("../../../public/#{$name}.#{$type}");
+    }
+    @return url("../../../#{$name}.#{$type}");
+}
+
+@function getImagePath($name, $isBlock: false, $type: 'svg') {
+    @return getAssetsPath("img/#{$name}", $isBlock, $type);
+}
+
+@function getIconPath($name, $isBlock: false, $type: 'svg') {
+    @return getAssetsPath("img/icons/#{$name}", $isBlock, $type);
+}

@@ -1,0 +1,39 @@
+.logo-animation {
+    $self: &;
+
+    &__dot {
+        fill: $c-black;
+        transition: transform .5s cubic-bezier(0, 1.01, 0.98, 1), fill .15s ease;
+
+        &--first {
+            transform: translate(0, 5px);
+        }
+
+        &--second {
+            transform: translate(0, 9px);
+        }
+    }
+
+    &--white {
+        path,
+        #{$self}__dot {
+            fill: $c-white;
+        }
+    }
+
+    &--animate {
+        #{$self}__dot {
+            transform: translate(0, 0);
+            fill: $c-prim !important;
+        }
+    }
+
+    path {
+        .dark-mode-animating & {
+            transition: fill $darkModeAnimationDuration $darkModeAnimationEasing;
+        }
+        .dark-mode & {
+            fill: $c-white;
+        }
+    }
+}

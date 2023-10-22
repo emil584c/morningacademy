@@ -1,0 +1,7 @@
+.idea
+node_modules
+vendor
+public/build
+resources/views/_cache
+
+!/.idea/blade.xml

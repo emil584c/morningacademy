@@ -1,0 +1,25 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "ma/profile-section",
+    "version": "0.1.0",
+    "title": "Profile section",
+    "category": "morningtrain",
+    "description": "Add a profile section",
+    "attributes": {
+        "title": {
+            "source": "html",
+            "type": "string",
+            "selector": ".mt-profile-section__title"
+        }
+    },
+    "supports": {},
+    "providesContext": {
+        "button/types": "buttonTypes"
+    },
+    "example": {},
+    "textdomain": "ma",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

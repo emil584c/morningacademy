@@ -1,0 +1,15 @@
+.mt-circle {
+    box-sizing: border-box;
+
+    circle {
+        fill: $c-prim;
+    }
+
+    &--type-yellow circle {
+        fill: $c-yellow;
+    }
+
+    &--type-sand circle {
+        fill: $c-sand;
+    }
+}

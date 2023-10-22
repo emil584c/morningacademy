@@ -1,0 +1,66 @@
+@import '../../css/block-editor/block-helper';
+
+.mt-frontpage-cover {
+  padding: 200px 0 144px;
+
+  &__title {
+    font-weight: $fw_semibold;
+    @include fontSize(72px);
+    letter-spacing: -1.48px;
+    line-height: 104%;
+    margin-top: 20px;
+
+    &--thin {
+      font-weight: $fw_regular;
+      font-style: italic;
+    }
+  }
+
+  &__corner-blob {
+    width: 700px;
+    height: 406px;
+    background: url("~img/top-animation.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  @include break(laptop) {
+
+    .mt-frontpage-cover__corner-blob {
+      width: 500px;
+      height: 306px;
+    }
+  }
+
+  @include break(tablet) {
+    padding: 120px 0;
+
+    .mt-frontpage-cover__title {
+      @include fontSize(60px);
+      margin-top: 12px;
+    }
+
+    .mt-frontpage-cover__corner-blob {
+      width: 400px;
+      height: 236px;
+    }
+  }
+
+  @include break(mobile) {
+    padding: 100px 0 80px;
+
+    .mt-frontpage-cover__title {
+      @include fontSize(40px);
+    }
+
+    .mt-frontpage-cover__corner-blob {
+      width: 200px;
+      height: 136px;
+    }
+  }
+}

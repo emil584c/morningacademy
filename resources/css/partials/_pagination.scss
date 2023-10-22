@@ -1,0 +1,78 @@
+.mt-pagination {
+    $self: &;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    &__link {
+        width: 48px;
+        height: 48px;
+        display: flex;
+
+        a {
+            text-decoration: none;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $c_border;
+            border-radius: 3px;
+            cursor: pointer;
+            color: $c_text;
+            transition: color .15s ease;
+        }
+
+        &:hover:not(.mt-pagination__link--active) a {
+            color: $c_prim;
+        }
+
+        &--disabled a {
+            pointer-events: none;
+            border: 1px solid $c_border;
+        }
+
+        &--active a {
+            pointer-events: none;
+            background: $c_prim;
+            border-color: $c_prim;
+            color: $c_white;
+        }
+
+        &--previous a,
+        &--next a {
+            background-image: url('~img/icons/swiper-arrow-orange.svg');
+            background-repeat: no-repeat;
+            background-size: 5px 8px;
+            background-position: center center;
+        }
+
+        &--previous a {
+            transform: scaleX(-1);
+        }
+    }
+
+    &--dark {
+        #{$self}__link {
+            a {
+                background: $c-prim;
+                border: 1px solid $c-prim;
+                color: $c_white;
+            }
+
+            //&--active a {
+            //    color: $c-white;
+            //}
+
+            &--previous a,
+            &--next a {
+                background-image: url('~img/icons/swiper-arrow-white.svg');
+                background-repeat: no-repeat;
+                background-size: 5px 8px;
+                background-position: center center;
+            }
+        }
+    }
+}

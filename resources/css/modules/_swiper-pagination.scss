@@ -1,0 +1,29 @@
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        background: $c-black;
+    }
+}
+
+.swiper-pagination-bullet-active:after {
+    background: $c-black;
+}
+
+.swiper-pagination-lock {
+    display: none !important;
+}

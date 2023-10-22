@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ma/post-slider-posts-picker",
+  "version": "0.1.0",
+  "title": "Post picker",
+  "category": "media",
+  "icon": "block-default",
+  "description": "Vælg selv indlæg",
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "object"
+    },
+    "linkText": {
+      "type": "string"
+    }
+  },
+  "example": {
+    "viewportWidth": 1320
+  },
+  "textdomain": "ma",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

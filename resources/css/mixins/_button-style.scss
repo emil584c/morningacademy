@@ -1,0 +1,19 @@
+@mixin buttonStyle() {
+    -webkit-appearance: none;
+    font-family: $font_prim;
+    font-weight: $fw_semibold;
+    border-radius: 0;
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid;
+    font-size: $fs_button;
+    padding: 1px 24px 0 !important;
+    text-decoration: none;
+    line-height: 45px !important;
+    display: inline-block;
+    outline: none;
+    user-select: none;
+    transition: transform .2s ease, background .2s ease, color .2s ease, border .2s ease;
+    will-change: transform, background, color;
+    position: relative;
+}

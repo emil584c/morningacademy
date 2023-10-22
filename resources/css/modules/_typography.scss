@@ -1,0 +1,65 @@
+html,
+body {
+    font-family: $font_prim;
+    font-size: $fs_text;
+    line-height: $lh_text;
+    color: $c-text-secondary;
+    font-weight: $fw_regular;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.mt-heading,
+.title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font_prim;
+    font-weight: $fw_semibold;
+    line-height: $lh_title;
+    color: $c-title;
+    letter-spacing: -1.52px;
+    margin: 0;
+    padding: 0;
+}
+
+.title--white {
+    color: $c-white;
+}
+
+.title--h1,
+h1 {
+    @include setFontSize($fs_h1, $fs_h1-medium, $fs_h1-small);
+    line-height: $lh_h1;
+}
+
+.title--h2,
+h2 {
+    @include setFontSize($fs_h2, $fs_h2-medium, $fs_h2-small);
+    line-height: $lh_h2;
+}
+
+.title--h3,
+h3 {
+    @include setFontSize($fs_h3, $fs_h3-medium, $fs_h3-small);
+    line-height: $lh_h3;
+}
+
+.title--h4,
+h4 {
+    @include setFontSize($fs_h4, $fs_h4-medium, $fs_h4-small);
+}
+
+.title--h5,
+h5 {
+    @include setFontSize($fs_h5, $fs_h5-medium, $fs_h5-small);
+}
+
+.title--h6,
+h6 {
+    @include setFontSize($fs_h6, $fs_h6-medium, $fs_h6-small);
+}

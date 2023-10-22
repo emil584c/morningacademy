@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@mixin letter-spacing($spacing) {
+    letter-spacing: math.div($spacing, 1000) * 1em;
+}

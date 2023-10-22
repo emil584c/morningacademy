@@ -1,0 +1,19 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "ma/footer",
+    "version": "0.1.0",
+    "title": "Footer",
+    "category": "morningtrain",
+    "parent": [],
+    "description": "",
+    "attributes": {},
+    "supports": {},
+    "textdomain": "ma",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css",
+    "viewScript": "file:./footer-view-script.js",
+    "renderView": "footer",
+    "viewPhpScript": "file:./footer-view-composing.php"
+}

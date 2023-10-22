@@ -1,0 +1,15 @@
+.mt-ring {
+    box-sizing: border-box;
+
+    circle {
+        stroke: $c-prim;
+    }
+
+    &--type-yellow circle {
+        stroke: $c-yellow;
+    }
+
+    &--type-sand circle {
+        stroke: $c-sand;
+    }
+}

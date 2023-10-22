@@ -1,0 +1,14 @@
+@import '../../css/block-editor/block-helper';
+
+.mt-text-fact-box {
+    margin-top: 32px;
+
+    &__box-container {
+        display: block;
+    }
+
+    .block-editor-block-list__layout {
+        display: flex !important;
+        flex-direction: column;
+    }
+}

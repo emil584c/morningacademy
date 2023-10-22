@@ -1,0 +1,21 @@
+@mixin buttonColor($bg, $c, $b) {
+    background: $bg !important;
+    color: $c !important;
+    border: 1px solid $b !important;
+}
+
+@mixin buttonHover($bg, $c, $b) {
+    &:hover {
+        background: $bg !important;
+        color: $c !important;
+        border: 1px solid $b !important;
+    }
+}
+
+@mixin buttonActive($bg, $c, $b) {
+    &:active {
+        background: $bg !important;
+        color: $c !important;
+        border: 1px solid $b !important;
+    }
+}

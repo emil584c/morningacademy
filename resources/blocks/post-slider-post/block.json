@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ma/post-slider-post",
+  "version": "0.1.0",
+  "title": "Post slider post",
+  "category": "media",
+  "icon": "block-default",
+  "description": "Tilføj et indlæg",
+  "parent": [
+    "ma/post-slider-posts-container"
+  ],
+  "attributes": {
+    "post": {
+      "type": "object"
+    }
+  },
+  "supports": {},
+  "textdomain": "ma",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "renderView": "post-slider/post-slide"
+}

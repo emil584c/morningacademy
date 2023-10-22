@@ -1,0 +1,80 @@
+@import '../../css/block-editor/block-helper';
+
+.mt-secondary-cover {
+
+    &__text-container {
+        margin-bottom: 64px;
+    }
+
+    &__title {
+        @include fontSize(72px);
+        letter-spacing: -1.48px;
+        font-weight: $fw_semibold;
+        margin-top: 20px;
+        margin-bottom: 32px;
+        max-width: 700px;
+    }
+
+    &__text {
+        @include fontSize(20px);
+        font-weight: $fw_regular;
+        color: $c-text-secondary;
+        letter-spacing: -0.4px;
+        max-width: 560px;
+    }
+
+    &__images {
+        position: relative;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+    }
+
+    &__image-container {
+        position: relative;
+        border-radius: 8px;
+        object-position: center;
+
+        &--right {
+            bottom: 64px;
+        }
+    }
+
+    @include break(laptop) {
+
+        .mt-secondary-cover__title {
+            @include fontSize(64px !important);
+        }
+    }
+
+    @include break(tablet) {
+
+        .mt-secondary-cover__title {
+            @include fontSize(40px !important);
+            max-width: 580px
+        }
+
+        .mt-secondary-cover__text {
+            @include fontSize(18px !important);
+            max-width: 470px;
+        }
+    }
+
+    @include break(mobile) {
+
+        .mt-secondary-cover__text-container {
+            margin-bottom: 32px;
+        }
+
+        .mt-secondary-cover__images {
+            grid-template-columns: 1fr;
+        }
+
+        .mt-secondary-cover__image-container {
+
+            &--right {
+                display: none;
+            }
+        }
+    }
+}

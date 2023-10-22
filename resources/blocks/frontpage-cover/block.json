@@ -1,0 +1,22 @@
+{
+  "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+  "apiVersion": 3,
+  "name": "ma/frontpage-cover",
+  "version": "0.1.0",
+  "title": "Frontpage Cover",
+  "category": "morningtrain",
+  "description": "",
+  "attributes": {
+    "tagline": {
+      "type": "string",
+      "source": "html",
+      "selector": ".mt-frontpage-cover__tagline"
+    }
+  },
+  "supports": {},
+  "textdomain": "ma",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "renderView": "covers/frontpage-cover",
+  "style": "file:./style-index.css"
+}

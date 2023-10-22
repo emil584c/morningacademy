@@ -1,0 +1,42 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "ma/secondary-cover",
+    "version": "0.1.0",
+    "title": "Secondary cover",
+    "category": "morningtrain",
+    "description": "A secondary cover",
+    "attributes": {
+        "tagline": {
+            "source": "html",
+            "type": "string",
+            "selector": ".mt-secondary-cover__tagline"
+        },
+        "title": {
+            "source": "html",
+            "type": "string",
+            "selector": ".mt-secondary-cover__title"
+        },
+        "text": {
+            "source": "html",
+            "type": "string",
+            "selector": ".mt-secondary-cover__text"
+        },
+        "firstImage": {
+            "type": "object"
+        },
+        "secondImage": {
+            "type": "object"
+        }
+    },
+    "supports": {
+        "mtSpacing": true
+    },
+    "providesContext": {
+        "button/types": "buttonTypes"
+    },
+    "textdomain": "ma",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

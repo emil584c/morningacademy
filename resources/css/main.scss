@@ -1,0 +1,14 @@
+@import 'variables/all';
+@import 'mixins/all';
+@import 'helpers/all';
+@import 'modules/all';
+@import 'partials/all';
+@import 'standard-block-customization/all';
+
+body {
+    position: relative;
+}
+
+.wp-site-blocks .wp-block-post-content {
+    overflow: hidden;
+}

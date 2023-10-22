@@ -1,0 +1,31 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "ma/button",
+    "version": "0.1.0",
+    "title": "Button",
+    "category": "morningtrain",
+    "parent": [],
+    "description": "Add a button",
+    "attributes": {
+        "post": {
+            "type": "object",
+            "default": {}
+        },
+        "text": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "default": "primary"
+        }
+    },
+    "usesContext": [
+        "button/types"
+    ],
+    "supports": {},
+    "textdomain": "ma",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

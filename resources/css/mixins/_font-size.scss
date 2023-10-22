@@ -1,0 +1,30 @@
+@use "sass:math";
+
+@function calculateRem($size) {
+    $remSize: math.div($size, 16px);
+    @return #{$remSize}rem;
+}
+
+@mixin fontSize($size, $important: false) {
+    @if $important {
+        font-size: $size !important; // Fallback in px
+        font-size: calculateRem($size) !important;
+    }
+
+    @else {
+        font-size: $size; // Fallback in px
+        font-size: calculateRem($size);
+    }
+}
+
+@mixin setFontSize($regular, $medium, $small) {
+    @include fontSize($regular);
+
+    @media screen and (max-width: 1400px) {
+        @include fontSize($medium);
+    }
+
+    @media screen and (max-width: 800px) {
+        @include fontSize($small);
+    }
+}

@@ -1,0 +1,17 @@
+.page-container {
+    max-width: var(--mt--container--width, 1280px);
+    margin: 0 auto;
+
+    @include break(laptop) {
+        max-width: var(--mt--container--width--laptop, 960px);
+    }
+
+    @include break(tablet) {
+        max-width: var(--mt--container--width--tablet, 720px);
+    }
+
+    @include break(mobile) {
+        max-width: var(--mt--container--width--mobile, 480px);
+        width: 90%;
+    }
+}

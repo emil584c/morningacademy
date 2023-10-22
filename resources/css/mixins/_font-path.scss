@@ -1,0 +1,7 @@
+@mixin fontPath($family, $name, $weight, $style: 'normal') {
+    font-family: $family;
+    font-weight: $weight;
+    font-display: swap;
+    font-style: $style;
+    src: url("~fonts/#{$name}.woff") format("woff");
+}

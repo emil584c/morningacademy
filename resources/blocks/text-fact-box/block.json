@@ -1,0 +1,34 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "ma/text-fact-box",
+    "version": "0.1.0",
+    "title": "Text fact box",
+    "parent": [
+        "ma/text-fact-boxes"
+    ],
+    "category": "morningtrain",
+    "description": "A text fact box block.",
+    "attributes": {
+        "title": {
+            "source": "html",
+            "type": "string",
+            "selector": ".mt-text-fact-boxes__title"
+        },
+        "text": {
+            "source": "html",
+            "type": "string",
+            "selector": ".mt-text-fact-boxes__text"
+        }
+    },
+    "supports": {
+        "mtSpacing": true
+    },
+    "providesContext": {
+        "button/types": "buttonTypes"
+    },
+    "textdomain": "ma",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

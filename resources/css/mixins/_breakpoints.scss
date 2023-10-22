@@ -1,0 +1,47 @@
+@mixin break($type, $max: '0') {
+    @if $type == mobile {
+        @media screen and (max-width: 800px) {
+            @content;
+        }
+    } @else if $type == tablet {
+        @media screen and (max-width: 1050px) {
+            @content;
+        }
+    } @else if $type == laptop {
+        @media screen and (max-width: 1400px) {
+            @content;
+        }
+    } @else if $max != '0' {
+        @media (min-width: $type + px) and (max-width: $max + px) {
+            @content;
+        }
+    } @else {
+        @media only screen and (max-width: $type + px) {
+            @content;
+        }
+    }
+}
+
+@mixin breakM($type, $max: '0') {
+    @if $type == mobile {
+        @media screen and (min-width: 801px) {
+            @content;
+        }
+    } @else if $type == tablet {
+        @media screen and (min-width: 1051px) {
+            @content;
+        }
+    } @else if $type == laptop {
+        @media screen and (min-width: 1401px) {
+            @content;
+        }
+    } @else if $max != '0' {
+        @media (min-width: $type + px) and (min-width: $max + px) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: $type + px) {
+            @content;
+        }
+    }
+}

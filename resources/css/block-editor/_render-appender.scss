@@ -1,0 +1,62 @@
+.block-editor-block-list__block {
+
+    .block-list-appender {
+        position: relative;
+
+        .block-editor-inserter {
+            margin-top: 32px;
+            width: 100%;
+        }
+
+        .block-editor-button-block-appender {
+            height: 100%;
+            box-shadow: none !important;
+            border: 1px dashed #1e1e1e;
+        }
+    }
+}
+
+
+.is-root-container>.block-list-appender:last-of-type {
+    height: 50px;
+    max-width: var(--mt--container--width, 1280px);
+    margin: 32px auto;
+
+    @include break(laptop) {
+        max-width: var(--mt--container--width--laptop, 960px);
+    }
+
+    @include break(tablet) {
+        max-width: var(--mt--container--width--tablet, 720px);
+    }
+
+    @include break(mobile) {
+        max-width: var(--mt--container--width--mobile, 480px);
+        width: 90%;
+    }
+
+    .block-editor-inserter {
+        width: 100%;
+        height: 50px;
+
+        .components-button {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 1px dashed #1e1e1e;
+
+            svg {
+                fill: #1e1e1e;
+            }
+        }
+    }
+}
+
+// White render appender
+.is-style-dark,
+.white-render-appender {
+    .block-editor-button-block-appender {
+        color: #fff;
+        border-color: #fff;
+    }
+}

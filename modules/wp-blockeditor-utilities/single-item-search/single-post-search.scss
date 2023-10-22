@@ -1,0 +1,79 @@
+// Basic single item search styles
+.sp-search {
+    width: 248px;
+    position: relative;
+
+    .components-spinner {
+        position: absolute;
+        top: 12px;
+        right: 19px;
+        z-index: 9;
+    }
+
+    .sp-search__results {
+        width: 100%;
+    }
+
+    &.is-loading {
+        .components-search-control__icon {
+            display: none;
+        }
+    }
+}
+
+// For the results. Note that when displayed in a Popover they are no longer children of .sp-search
+.sp-search__results {
+    width: 248px;
+    padding: 9px;
+
+    .sp-search__result {
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .post-type {
+            flex-shrink: 0;
+            display: none;
+            background-color: #ddd;
+            padding: 3px 10px 5px;
+            border-radius: 12px;
+        }
+
+        &:hover {
+            background-color: #f0f0f0;
+
+            .post-type {
+                background-color: var(--wp-admin-theme-color);
+                color: white;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+// For when the sp-search is displayed in InspectorControls
+.components-panel {
+    .sp-search {
+        width: 100%;
+    }
+}
+
+// For when the entire search is in a popover
+.components-popover {
+    .sp-search {
+        .components-search-control__input-wrapper {
+            margin: 8px;
+            padding: 1px;
+        }
+
+        .sp-search__results {
+            border-top: 1px solid #ddd;
+        }
+    }
+}
+
+// For the custom render appender
+.single-item-search__render-appender {
+    // Hi Mark!
+}

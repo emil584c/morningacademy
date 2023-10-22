@@ -1,0 +1,210 @@
+@import '../../../css/block-editor/block-helper';
+
+.mt-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: background .15s ease, box-shadow .15s ease;
+
+    body.admin-bar & {
+        top: 32px;
+
+        @include break(760) {
+            top: 46px;
+        }
+    }
+
+    body.mt-header-scrolled & {
+        background: $c-white;
+        box-shadow: 0 3px 32px rgba(0, 0, 0, .04);
+
+        .mt-header__inner {
+            height: 72px;
+        }
+    }
+
+    &__inner {
+        height: 88px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: height .2s ease;
+    }
+
+    &__left {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__logo {
+        position: relative;
+        display: flex;
+        top: 6px;
+    }
+
+    &__center {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        display: flex;
+        gap: 40px;
+
+        @include break(tablet) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        color: $c-black;
+
+        li {
+            color: inherit;
+        }
+
+        li a {
+            position: relative;
+            display: inline-block;
+            color: inherit;
+            @include fontSize(17px);
+            font-weight: $fw_semibold;
+            line-height: 1.45;
+            will-change: color;
+            padding-top: 1px; // Fix for font rendering
+            transition: color .5s cubic-bezier(0.85, 0, 0.15, 1);
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -12px;
+                left: 0;
+                background: $c-prim;
+                width: 0;
+                height: 2px;
+                will-change: width;
+                transition: width .5s cubic-bezier(0.85, 0, 0.15, 1);
+            }
+
+            &:hover {
+                color: $c-prim !important;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__right {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__user-image {
+        height: 35px !important;
+
+        img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+    }
+
+    &__heart {
+        cursor: pointer;
+
+        svg {
+            display: block;
+            animation: heartPulse 3s cubic-bezier(1, 0, 0, 1) infinite;
+
+            path {
+                fill: transparent;
+                transition: fill .15s ease-in-out, stroke .15s ease-in-out;
+            }
+
+            &:hover path {
+                fill: $c-prim !important;
+                stroke: $c-prim !important;
+            }
+        }
+
+        @keyframes heartPulse {
+            0% {
+                transform: scale(1);
+            }
+
+            6% {
+                transform: scale(1.15);
+            }
+
+            12% {
+                transform: scale(1);
+            }
+
+            18% {
+                transform: scale(1.15);
+            }
+
+            24% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+// Dark mode
+.dark-mode-animating {
+    .mt-header__menu li a {
+        transition: color $darkModeAnimationDuration $darkModeAnimationEasing;
+    }
+
+    .mt-header__heart svg path {
+        transition: stroke $darkModeAnimationDuration $darkModeAnimationEasing;
+    }
+
+    .mt-header__navigation-toggle {
+
+        div:after,
+        div:before {
+            transition: background $darkModeAnimationDuration $darkModeAnimationEasing;
+        }
+    }
+}
+
+.dark-mode {
+    .mt-header__menu li a {
+        color: $c-white;
+    }
+
+    .mt-header__heart svg path {
+        stroke: $c-white;
+    }
+
+    .mt-header__navigation-toggle {
+
+        div:after,
+        div:before {
+            background: $c-white;
+        }
+    }
+}

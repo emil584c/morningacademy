@@ -1,0 +1,51 @@
+@mixin listStyle($color, $darkModeColor) {
+
+    ul,
+    ol {
+        color: $color;
+        padding-left: 24px;
+    }
+
+    ul {
+        list-style-type: none;
+
+        li {
+            position: relative;
+
+            &:before {
+                content: '';
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                position: absolute;
+                top: 12px;
+                left: -14px;
+                background: $color;
+            }
+        }
+    }
+
+    .dark-mode-animating & {
+
+        ul,
+        ol {
+            transition: color $darkModeAnimationDuration $darkModeAnimationEasing;
+        }
+
+        ul li:before {
+            transition: background $darkModeAnimationDuration $darkModeAnimationEasing;
+        }
+    }
+
+    .dark-mode & {
+
+        ul,
+        ol {
+            color: $darkModeColor;
+        }
+
+        ul li:before {
+            background: $darkModeColor;
+        }
+    }
+}

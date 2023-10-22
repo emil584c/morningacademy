@@ -1,0 +1,19 @@
+@import '../../css/block-editor/block-helper';
+
+.mt-text-fact-boxes {
+
+    &__box-container {
+        display: block;
+    }
+
+    .block-editor-block-list__layout {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &:not(.is-selected):not(.has-child-selected) {
+        .block-list-appender {
+            display: none;
+        }
+    }
+}

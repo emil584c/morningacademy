@@ -1,0 +1,55 @@
+.input-control--box-input {
+    position: relative;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.input-control--box-input .overlay {
+    pointer-events: none;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.input-control--box-input:hover .overlay {
+    display: block;
+}
+
+.input-control--box-input .remove {
+    z-index: 2;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.input-control--box-input .overlay p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+
+.input-control--box-input .fallback {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    background-color: lightgrey;
+}
+
+.input-control--box-input .fallback::before {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    top: 12px;
+    border: 2px dashed grey;
+}
