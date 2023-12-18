@@ -5,13 +5,17 @@
   "version": "0.1.0",
   "title": "Frontpage Cover",
   "category": "morningtrain",
-  "description": "",
+  "description": "A cover section for the frontpage",
   "attributes": {
-    "tagline": {
-      "type": "string",
-      "source": "html",
-      "selector": ".mt-frontpage-cover__tagline"
-    }
+    "firstImage": {
+      "type": "object"
+  },
+  "secondImage": {
+      "type": "object"
+  },
+  "thirdImage": {
+      "type": "object"
+  }
   },
   "supports": {},
   "textdomain": "ma",

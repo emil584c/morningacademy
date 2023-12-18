@@ -1,0 +1,26 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "ma/tagline",
+    "version": "0.1.0",
+    "title": "Tagline",
+    "category": "morningtrain",
+    "parent": [],
+    "description": "Add a tagline",
+    "attributes": {
+        "content": {
+            "type": "string",
+            "source": "html",
+            "selector": ".mt-tagline"
+        },
+        "tag": {
+            "type": "string",
+            "default": "p"
+        }
+    },
+    "supports": {},
+    "textdomain": "mt",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

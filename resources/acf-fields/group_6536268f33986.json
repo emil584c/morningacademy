@@ -1,0 +1,54 @@
+{
+    "key": "group_6536268f33986",
+    "title": "Series",
+    "fields": [
+        {
+            "key": "field_6536269e1293f",
+            "label": "Series color",
+            "name": "taxonomy_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#F8CFB1": "Sand",
+                "#FEC539": "Gul",
+                "#1B1AF5": "Blå",
+                "#09684B": "Grøn",
+                "#FF9452": "Orange",
+                "#F4E1FD": "Pink"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "guide_series"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1698047687
+}

@@ -26,6 +26,13 @@ class PostArchiveViewComposingHandler
                 ];
             } else {
                 $searchPlaceholder = __('Søg blandt guides', 'ma');
+                $seriesFilters = [
+                    [
+                        'label' => __('Alle serier', 'ma'),
+                        'taxonomy' => GuideService::SERIES_SLUG,
+                        'terms' => GuideService::getSeriesForFilter()
+                    ]
+                ];
                 $taxFilters = [
                     [
                         'label' => __('Alle kategorier', 'ma'),
@@ -38,6 +45,7 @@ class PostArchiveViewComposingHandler
             $view->with([
                 'postType' => $postType,
                 'taxFilters' => $taxFilters,
+                'seriesFilters' => $seriesFilters,
                 'years' => PostArchiveService::getPostsYears($postType),
                 'currentCategory' => $categoryId,
                 'currentPageIndex' => $currentPageIndex,

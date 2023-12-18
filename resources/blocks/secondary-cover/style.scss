@@ -38,6 +38,10 @@
         &--right {
             bottom: 64px;
         }
+
+        img {
+            border-radius: 8px;
+        }
     }
 
     @include break(laptop) {

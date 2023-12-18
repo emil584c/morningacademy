@@ -1,11 +1,11 @@
 import Swiper from "swiper";
 import ld from "lodash";
+import { Pagination } from "swiper/modules";
 
 let __ = ld.noConflict();
 
 document.addEventListener("DOMContentLoaded", () => {
   const EVENT_SLIDERS = document.querySelectorAll(".mt-guide-overview__inner");
-  console.log(EVENT_SLIDERS)
 
   if (EVENT_SLIDERS.length > 0) {
     EVENT_SLIDERS.forEach((SLIDER) => {
@@ -17,22 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const swiperOptions = {
+        modules: [Pagination],
         init: false,
         speed: 800,
-        spaceBetween: 0,
-        watchOverflow: true,
-        threshold: 15,
+        spaceBetween: 24,
+        watchOverflow: false,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-          dynamicBullets: true,
         },
         breakpoints: {
-          400: { slidesPerView: 1, spaceBetween: 12 },
+          400: { slidesPerView: 1.1, spaceBetween: 24 },
           800: { slidesPerView: 1.4, spaceBetween: 12 },
         },
       };
-
       let swiper = new Swiper(SWIPER_ELEMENT, swiperOptions);
 
       if (getScreenWidth() <= 970) {
@@ -62,9 +60,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function getScreenWidth() {
-  return (
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth
-  );
+  return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 }

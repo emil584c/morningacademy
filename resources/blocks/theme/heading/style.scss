@@ -1,0 +1,12 @@
+@import '../../../css/block-editor/block-helper';
+
+.mt-heading {
+
+    &--has-bold {
+        font-weight: $fw_regular !important;
+
+        strong {
+            font-weight: $fw_semibold !important;
+        }
+    }
+}

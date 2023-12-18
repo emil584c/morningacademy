@@ -1,0 +1,31 @@
+stages:
+  - prepare
+  - install
+  - build
+  - deploy
+  - test
+  
+
+variables:
+  PHP_VERSION: '8.1'
+  NODE_VERSION: '18'
+  NPM_BUILD_SCRIPT: 'build'
+
+include:
+  - remote: https://devops.mtra.in/tpl/v6/flows/wordpress.yml
+
+deploy-staging:
+  extends: .deploy-git
+  environment:
+    name: staging
+    url: https://morningacademy.dk.bluebird.pw/
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "qa"'
+      when: on_success
+build:laravel-mix-npm:
+  rules:
+
+test:npm-test:
+  rules:
+    - when: never
+  

@@ -33,12 +33,17 @@ class GuideViewComposingHandler
     {
         View::composer('guides/guide-cover', function (\Illuminate\View\View $view) {
             $termId = !empty($view['termId']) ? $view['termId'] : 0;
+            $categories = CategoryTaxonomyService::getCategoriesForPost(get_the_id());
             $view->with([
                 'src' => get_the_post_thumbnail_url(),
                 'title' => get_the_title(),
                 'date' => get_the_date(),
                 'video' => \get_field('guide_video'),
                 'description' => \get_field('guide_description'),
+                'series' => CategoryTaxonomyService::getFirstSeriesForPost(get_the_ID()),
+                'terms' => !empty($categories) ? array_map(function ($term) {
+                    return CategoryTaxonomyService::getCategoryDataForTag($term);
+                }, $categories) : [],
             ]);
         });
     }
@@ -56,7 +61,7 @@ class GuideViewComposingHandler
     public static function getCategories(int|string $parentCategory = 0): array|\WP_Error|string
     {
         return get_terms([
-            'taxonomy' => 'category',
+            'taxonomy' => 'guide-categories',
             'hide_empty' => true,
             'parent' => $parentCategory,
             'exclude' => [1] // Exclude "Uncategorized"

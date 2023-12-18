@@ -23,16 +23,6 @@ body.login {
     background-repeat: no-repeat;
     background-color: black;
 
-    &::after {
-        content: '';
-        background-color: black;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: .4;
-    }
-
     form {
         padding: 0 1px 16px !important;
     }

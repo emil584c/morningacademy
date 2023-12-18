@@ -1,0 +1,133 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "mt/contact-section-primary",
+    "version": "0.1.0",
+    "title": "Contact Section Primary",
+    "category": "morningtrain",
+    "description": "Add a primary contact section.",
+    "attributes": {
+        "leftTopEmployee": {
+            "type": "object",
+            "default": {
+                "id": 1251,
+                "title": "Steffen Christensen",
+                "image": {
+                    "src": "https://morningtrain.dk.bluebird.pw/wp-content/uploads/2023/11/steffen.png",
+                    "alt": "Steffen Christensen"
+                }
+            }
+        },
+        "leftMiddleEmployee": {
+            "type": "object",
+            "default": {
+                "id": 1253,
+                "title": "Sune Roed",
+                "image": {
+                    "src": "https://morningtrain.dk.bluebird.pw/wp-content/uploads/2023/11/sune.png",
+                    "alt": "Sune Roed"
+                }
+            }
+        },
+        "leftBottomEmployee": {
+            "type": "object",
+            "default": {
+                "id": 1255,
+                "title": "Frederik Steffensen",
+                "image": {
+                    "src": "https://morningtrain.dk.bluebird.pw/wp-content/uploads/2023/11/frederik.png",
+                    "alt": "Frederik Steffensen"
+                }
+            }
+        },
+        "rightTopEmployee": {
+            "type": "object",
+            "default": {
+                "id": 1186,
+                "title": "Jesper Martinussen",
+                "image": {
+                    "src": "https://morningtrain.dk.bluebird.pw/wp-content/uploads/2023/10/jesper.png",
+                    "alt": "Jesper Martinussen"
+                }
+            }
+        },
+        "rightMiddleEmployee": {
+            "type": "object",
+            "default": {
+                "id": 1185,
+                "title": "Thomas Østerkjerhuus",
+                "image": {
+                    "src": "https://morningtrain.dk.bluebird.pw/wp-content/uploads/2023/10/oester.png",
+                    "alt": "Thomas Østerkjerhuus"
+                }
+            }
+        },
+        "rightBottomEmployee": {
+            "type": "object",
+            "default": {
+                "id": 1257,
+                "title": "Thobias Laustsen",
+                "image": {
+                    "src": "https://morningtrain.dk.bluebird.pw/wp-content/uploads/2023/11/thobias.png",
+                    "alt": "Thobias Laustsen"
+                }
+            }
+        },
+        "buttonTypes": {
+            "type": "array",
+            "default": ["primary", "calendar"]
+        }
+    },
+    "supports": {
+        "mtSpacing": true
+    },
+    "example": {
+        "viewportWidth": 1920,
+        "innerBlocks": [
+            {
+                "name": "mt/tagline",
+                "attributes": {
+                    "content": "Tøv ikke - vi er altid klar på en snak"
+                }
+            },
+            {
+                "name": "mt/heading",
+                "attributes": {
+                    "content": "Lad os tage en snak om dit digitale projekt"
+                }
+            },
+            {
+                "name": "core/paragraph",
+                "attributes": {
+                    "content": "Lad os gå i detaljer så vi sammen kan finde løsninger, der passer til dine behov."
+                }
+            },
+            {
+                "name": "mt/buttons",
+                "innerBlocks": [
+                    {
+                        "name": "mt/button",
+                        "attributes": {
+                            "text": "Kontakt os",
+                            "type": "secondary"
+                        }
+                    },
+                    {
+                        "name": "mt/button",
+                        "attributes": {
+                            "text": "Book et møde",
+                            "type": "calendar"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "providesContext": {
+        "button/types": "buttonTypes"
+    },
+    "textdomain": "mt",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

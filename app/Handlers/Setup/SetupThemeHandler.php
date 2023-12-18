@@ -29,9 +29,6 @@ class SetupThemeHandler
 
         Enqueue::style('swiper-style', 'css/swiper-style.css')
             ->register();
-
-        Enqueue::style('case-card', 'css/case-card.css')
-            ->register();
     }
 
     public static function enqueueGoogleFonts()

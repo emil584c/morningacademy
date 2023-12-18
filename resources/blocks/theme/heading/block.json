@@ -1,0 +1,27 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "ma/heading",
+    "version": "0.1.0",
+    "title": "Heading",
+    "category": "morningtrain",
+    "parent": [],
+    "description": "Add a heading",
+    "attributes": {
+        "content": {
+            "type": "string",
+            "source": "html",
+            "selector": ".mt-heading",
+            "default": ""
+        },
+        "tag": {
+            "type": "string",
+            "default": "h2"
+        }
+    },
+    "supports": {},
+    "textdomain": "mt",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

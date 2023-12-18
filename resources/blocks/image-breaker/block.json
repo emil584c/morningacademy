@@ -1,0 +1,27 @@
+{
+    "$schema": "https://wp.cdn.mtra.in/default/schemas/block.json",
+    "apiVersion": 3,
+    "name": "ma/image-breaker",
+    "version": "0.1.0",
+    "title": "Image breaker",
+    "category": "morningtrain",
+    "description": "A breaker section with two images",
+    "attributes": {
+        "firstImage": {
+            "type": "object"
+        },
+        "secondImage": {
+            "type": "object"
+        },
+        "thirdImage": {
+            "type": "object"
+        }
+    },
+    "supports": {
+        "mtSpacing": true
+    },
+    "textdomain": "ma",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

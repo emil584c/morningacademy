@@ -4,12 +4,12 @@ namespace MA\App\Services\Posts;
 
 class PostArchiveService
 {
-    public const CATEGORY_SLUG = 'category';
+    public const CATEGORY_SLUG = 'guide-categories';
 
     public static function getTerms(): array|\WP_Error|string
     {
         return get_terms([
-            'taxonomy' => 'category',
+            'taxonomy' => 'guide-categories',
             'hide_empty' => true,
         ]);
     }

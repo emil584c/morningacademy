@@ -1,14 +1,28 @@
-import { registerBlockType } from '@wordpress/blocks'
+import { registerBlockType } from "@wordpress/blocks";
+
 // The Edit and Save functions
-import Edit from './Edit'
+import edit from "./Edit";
+import deprecated from "./deprecated";
 
 // The stylesheets
-import './style.scss'
-import './editor.scss'
+import "./style.scss";
+import "./editor.scss";
+
 // The block info
-import metadata from './block.json'
+import metadata from "./block.json";
+// Block icon SVF
+import Icon from "./icon";
+// All known block variations
+import variations from "./variations";
+
 // Register the block
 registerBlockType(metadata.name, {
-  edit: Edit,
-  save: () => null
-})
+  icon: {
+    foreground: "#FF8B43",
+    src: Icon,
+  },
+  variations,
+  edit,
+  save: () => null,
+  deprecated,
+});

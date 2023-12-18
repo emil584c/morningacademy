@@ -10,8 +10,8 @@ class RegisterGuidePostTypeHandler
     {
         \register_post_type(GuideService::SLUG, [
             'labels' => [
-                'name' => __('Guides', 'mf'),
-                'singular_name' => __('Guide', 'mf')
+                'name' => __('Guides', 'ma'),
+                'singular_name' => __('Guide', 'ma')
             ],
             'public' => true,
             'show_ui' => true,

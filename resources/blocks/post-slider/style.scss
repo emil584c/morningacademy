@@ -3,14 +3,26 @@
 .mt-post-slider {
     overflow: hidden;
     position: relative;
-    padding-top: 80px;
     $self: &;
+    padding: 80px 0;
 
     &__title {
-        margin-bottom: 40px;
+        margin-bottom: 40px !important;
+        @include fontSize(40px);
 
-        @include break(1250) {
+        @include break(laptop) {
+            margin-bottom: 32px;
+            @include fontSize(36px);
+        }
+
+        @include break(tablet) {
             margin-bottom: 24px;
+            @include fontSize(32px);
+        }
+        
+        @include break(mobile) {
+            margin-bottom: 32px;
+            @include fontSize(28px);
         }
     }
 
@@ -236,27 +248,326 @@
         }
     }
 
-    .swiper {
+    .mt-guide-card {
+        $self: &;
+        position: relative;
+    
+        &:hover {
+    
+            .mt-guide-card__color-circle {
+                transition: bottom 400ms, right 400ms, height, 400ms, width 400ms;
+                transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+                transition-delay: 0ms;
+                bottom: -104px;
+                right: -90px;
+                height: 360px;
+                width: 360px;
+    
+                @include break (laptop) {
+                    bottom: -60px;
+                    right: -60px;
+                    height: 280px;
+                    width: 280px;
+                }
+    
+                @include break (mobile) {
+                    width: 270px;
+                    height: 270px;
+                    right: -70px;
+                    bottom: -60px;
+                }
+            }
+    
+            .mt-guide-card__image-container {
+                transition: max-height 400ms, right 400ms;
+                transition-delay: 0ms;
+                max-height: 330px;
+                right: 6px;
+    
+                @include break (laptop) {
+                    max-height: 280px;
+                    right: 6px;
+                }
+    
+                @include break (tablet) {
+                    max-height: 260px;
+                    right: 16px;
+                }
 
+                @include break(mobile) {
+                    max-height: 220px;
+                    right: 4px;
+                    bottom: 35px;
+                }
+            }
+    
+            .mt-guide-card__full-image-container {
+    
+                img {
+                    scale: 1.05;
+                }
+            }
+        }
+    
+        &__inner {
+            position: relative;
+            background-color: $c-card-bg;
+            border-radius: 8px;
+            padding: 32px;
+            height: 360px;
+            overflow: hidden;
+        }
+    
+        &__text-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            z-index: 4;
+            gap: 16px;
+    
+            h4 {
+                @include fontSize(28px);
+                font-weight: $fw_semibold;
+                max-width: 342px
+            }
+        }
+    
+        &__image-container {
+            transition: max-height 400ms, right 400ms;
+            position: absolute;
+            max-height: 310px;
+            height: 100%;
+            bottom: 0;
+            right: 12px;
+            z-index: 2;
+        }
+    
+        &__full-image-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            object-position: center;
+            overflow: hidden;
+    
+            img {
+                transition: scale 300ms ease;
+            }
+        }
+    
+       
+        &__title {
+            @include fontSize(22px);
+            font-weight: $fw_bold;
+        }
+    
+        &__info {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__info-row {
+            display: flex;
+        }
+    
+        &__category-row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    
+        &__date {
+            text-transform: uppercase;
+            @include fontSize(13px);
+            font-weight: $fw_semibold;
+        }
+        
+        &__info-item {
+            @include fontSize(13px);
+            font-weight: $fw_semibold;
+        }
+    
+        &__info-item-container {
+            display: flex;
+            align-items: center;
+    
+            &::before {
+                content: '';
+                display: block;
+                height: 3px;
+                width: 3px;
+                background-color: $c-black;
+                border-radius: 50%;
+                margin: 0 8px;
+            }
+    
+            &:first-of-type {
+    
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    
+        &__series {
+            color: $c-black;
+            @include fontSize(24px);
+            max-width: 240px;
+            font-family: $font_secondary;
+            margin-bottom: 12px;
+        }
+        
+        &__color-circle {
+            transition: bottom 400ms, right 400ms, height, 400ms, width 400ms;
+            transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -104px;
+            right: -60px;
+            z-index: 1;
+        }
+    
+        &__link {
+            position: absolute;
+            inset: 0;
+            z-index: 6;
+        }
+    
+        .swiper-wrapper {
+    
+            @include breakM(tablet) {
+                display: grid;
+            }
+        }
+    
+        &__wrapper {
+            position: relative;
+            margin-top: 32px;
+            max-width: 1440px;
+        }
+    
+        .swiper {
+            overflow: visible !important;
+            position: relative !important;
+        }
+    
+        .swiper-slide {
+            height: auto;
+        }
+    
+    
+        @include break(laptop) {
+    
+            .mt-guide-card__inner {
+                height: 345px;
+            }
+    
+            .mt-guide-card__image-container {
+                max-height: 260px;
+                right: 16px;
+            }
+    
+            .mt-guide-card__color-circle {
+                width: 280px;
+                height: 280px;
+                bottom: -60px;
+                right: -60px;
+            }
+    
+            .mt-guide-card__info-row {
+                flex-direction: column;
+            }
+
+            .mt-guide-card__category-row {
+                max-width: 220px;
+            }
+        }
+    
         @include break(tablet) {
-            overflow: visible;
+            max-width: 480px;
         }
-    }
+    
+        @include break(mobile) {
+            max-width: 330px;
+    
+            .mt-guide-card__text-container {
+                justify-content: flex-start;
+                gap: 24px;
+            }
+    
+            .mt-guide-card__inner {
+                height: 345px;
+            }
+    
+            .mt-guide-card__info {
+                background-color: #FF9452;
+                position: absolute;
+                width: 100%;
+                padding: 8px 20px;
+                left: 0;
+                bottom: 0;
+                z-index: 4;
+            }
+    
+            .mt-guide-card__series {
+                color: #F6EFEA;
+                max-width: 400px !important;
+                margin-bottom: 0px;
+            }
+    
+            .mt-guide-card__info-item {
+                color: #F8CFB1;
+    
+            }
+            
+            .mt-guide-card__info-item-container {
+                &::before {
+                    background-color: #F8CFB1;
+                }    
+            }
+    
+            .mt-guide-card__image-container {
+                max-height: 220px;
+            overflow: hidden;
+            right: 4px;
+            bottom: 35px;
 
-    &.is-style-white {
-        background: none !important;
-    }
-
-    &.is-style-light {
-        background-color: $c-white;
-
-        .mt-tag {
-            background: $c_white;
-        }
-
-        #{$self}__categories-wrapper {
-            &:after {
-                background: linear-gradient(to left, $c-white, transparent);
+    
+                img {
+                    position: relative;
+                }
+            }
+    
+            .mt-guide-card__info-row {
+                flex-direction: column;
+            }
+    
+            .mt-guide-card__text-container {
+                height: 260px;
+    
+                p {
+                    max-width: 164px
+                }
+    
+                h4 {
+                    @include fontSize(20px);
+                    max-width: 240px;
+                }
+            }
+    
+            .mt-guide-card__color-circle {
+                width: 270px;
+                height: 270px;
+                right: -70px;
+                bottom: -60px;
+            }
+    
+            .mt-guide-card__category-flex {
+                display: flex;
+                flex-direction: column ;
             }
         }
     }

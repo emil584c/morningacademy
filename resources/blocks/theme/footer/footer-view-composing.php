@@ -17,7 +17,7 @@ View::composer('footer', function (\Illuminate\View\View $view) {
     }
 
     $view->with([
-        'logo' => View::render('mt-logo', ['isWhite' => true]),
+        'logo' => View::render('ma-logo-white', ['isWhite' => true]),
         'logoUrl' => \home_url(),
         'menu' => \wp_nav_menu([
             'echo' => false,

@@ -7,20 +7,11 @@ import {
 import ServerSideRender from "@wordpress/server-side-render";
 import metadata from "./block.json";
 import classNames from "classnames";
-import {
-  PanelBody,
-  __experimentalInputControl as InputControl,
-  SelectControl,
-} from "@wordpress/components";
+import { PanelBody, __experimentalInputControl as InputControl, SelectControl } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 import { useSelect } from "@wordpress/data";
 
-export default function Edit({
-  attributes,
-  setAttributes,
-  isSelected,
-  context,
-}) {
+export default function Edit({ attributes, setAttributes, isSelected, context }) {
   const blockProps = useBlockProps({
     className: classNames("mt-post-slider-posts", {
       "is-selected": isSelected,
@@ -29,16 +20,14 @@ export default function Edit({
   });
 
   const categories = useSelect((select) => {
-    const terms = select("core").getEntityRecords("taxonomy", "category");
+    const terms = select("core").getEntityRecords("taxonomy", "guide_categories");
 
     if (!terms || terms.length === 0) {
       return [];
     }
 
     // remove uncategorized
-    const filteredTerms = terms.filter(
-      (term) => term.slug !== "uncategorized" && term.parent === 0
-    );
+    const filteredTerms = terms.filter((term) => term.slug !== "uncategorized" && term.parent === 0);
 
     const newTerms = filteredTerms.map((term) => {
       return {
@@ -69,10 +58,7 @@ export default function Edit({
           <PanelBody title={__("Kategori", "ma")}>
             <SelectControl
               value={attributes.termId}
-              help={__(
-                "Vis de 10 nyeste indlæg fra den valgte kategori",
-                "ma"
-              )}
+              help={__("Vis de 10 nyeste indlæg fra den valgte kategori", "ma")}
               onChange={(termId) => setAttributes({ termId: parseInt(termId) })}
               options={categories}
             />
@@ -101,10 +87,7 @@ export default function Edit({
               }}
             />
           </div>
-          <ServerSideRender
-            block={metadata.name}
-            attributes={attributes}
-          />
+          <ServerSideRender block={metadata.name} attributes={attributes} />
         </div>
       </section>
     </>

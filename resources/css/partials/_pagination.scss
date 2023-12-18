@@ -10,6 +10,7 @@
         width: 48px;
         height: 48px;
         display: flex;
+        border-radius: 50% !important;
 
         a {
             text-decoration: none;
@@ -23,6 +24,7 @@
             cursor: pointer;
             color: $c_text;
             transition: color .15s ease;
+            border-radius: 50%;
         }
 
         &:hover:not(.mt-pagination__link--active) a {
@@ -43,14 +45,31 @@
 
         &--previous a,
         &--next a {
-            background-image: url('~img/icons/swiper-arrow-orange.svg');
+            background-image: url('~img/icons/swiper-arrow-white.svg');
             background-repeat: no-repeat;
             background-size: 5px 8px;
             background-position: center center;
+            background-color: $c-prim;
         }
 
         &--previous a {
             transform: scaleX(-1);
+        }
+
+        &--previous {
+            margin-right: 40px;
+
+            @include break(mobile) {
+                margin-right: 0;
+            }
+        }
+
+        &--next {
+            margin-left: 40px;
+
+            @include break(mobile) {
+                margin-left: 0;
+            }
         }
     }
 

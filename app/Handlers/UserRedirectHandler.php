@@ -13,4 +13,16 @@ class UserRedirectHandler
             exit();
         }
     }
+
+    public static function redirectAfterLogin($url, $request, $user)
+    {
+        if ($user && is_object($user) && is_a($user, 'WP_User')) {
+            if ($user->has_cap('subscriber') || $user->has_cap('eksamensbruger')) {
+                $url = site_url('');
+            } else {
+                $url = admin_url();
+            }
+        }
+        return $url;
+    }
 }

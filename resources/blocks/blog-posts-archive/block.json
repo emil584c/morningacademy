@@ -20,8 +20,7 @@
   },
   "textdomain": "ma",
   "viewScript": [
-    "file:./post-archive.js",
-    "file:./post-archive/ProgressBar.js"
+    "file:./post-archive.js"
   ],
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",

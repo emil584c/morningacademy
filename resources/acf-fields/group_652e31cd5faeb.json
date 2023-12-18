@@ -41,35 +41,6 @@
             "delay": 0
         },
         {
-            "key": "field_652e8176ed7b3",
-            "label": "Baggrund cirkel farve",
-            "name": "background_circle_color",
-            "type": "select",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "#F8CFB1": "Sand",
-                "#FEC539": "Gul",
-                "#1B1AF5": "Blå",
-                "#09684B": "Grøn",
-                "#FF9452": "Orange",
-                "#F4E1FD": "Pink"
-            },
-            "default_value": false,
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "return_format": "value",
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_652e3209e3140",
             "label": "Guide fuldt størrelse billede",
             "name": "guide_full_image",
@@ -98,7 +69,7 @@
             "label": "Vis guide for alle",
             "name": "public",
             "type": "true_false",
-            "instructions": "Skal den vises for alle brugere?",
+            "instructions": "Skal den vises for alle brugere?\r\n\r\nOBS: Husk at vælge en bruger, og tilføje kategorien \"Videoer til dig\"",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -156,6 +127,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1697707136
+    "show_in_rest": 1,
+    "modified": 1698392046
 }

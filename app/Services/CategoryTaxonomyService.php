@@ -5,6 +5,7 @@ namespace MA\App\Services;
 class CategoryTaxonomyService
 {
     public static string $slug = 'guide_categories';
+    public static string $seriesSlug = 'guide_series';
 
     public static function getCategoriesForPost(int|string $postId): array
     {
@@ -20,6 +21,29 @@ class CategoryTaxonomyService
     public static function getFirstCategoryForPost(int|string $postId): ?\WP_Term
     {
         $terms = static::getCategoriesForPost($postId);
+
+        if (empty($terms)) {
+            return null;
+        }
+
+        return $terms[0];
+    }
+
+    public static function getSeriesForPost(int|string $postId): array
+    {
+        $terms = \get_the_terms($postId, static::$seriesSlug);
+
+
+        if (\is_wp_error($terms) || empty($terms)) {
+            return [];
+        }
+
+        return $terms;
+    }
+
+    public static function getFirstSeriesForPost(int|string $postId): ?\WP_Term
+    {
+        $terms = static::getSeriesForPost($postId);
 
         if (empty($terms)) {
             return null;

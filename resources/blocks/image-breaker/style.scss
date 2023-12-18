@@ -1,0 +1,60 @@
+@import '../../css/block-editor/block-helper';
+
+.mt-image-breaker {
+    margin-bottom: 200px;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    &__image-container {
+        position: relative;
+        aspect-ratio: 400/580;
+
+        img {
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        &--center {
+            top: 104px;
+        }
+
+        &--right {
+            top: 208px;
+        }
+    }
+
+    @include break (tablet) {
+        margin-bottom: 100px;
+
+        .mt-image-breaker__image-container {
+
+            &--center {
+                top: 64px;
+            }
+
+            &--right {
+                top: 128px;
+            }
+        }
+    }
+
+    @include break (mobile) {
+        margin-bottom: 0;
+
+        .mt-image-breaker__inner {
+            gap: 16px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .mt-image-breaker__image-container {
+
+            &--right {
+                top: 0;
+            }
+        }
+    }
+}

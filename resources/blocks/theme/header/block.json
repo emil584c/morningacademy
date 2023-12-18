@@ -13,7 +13,7 @@
     "editorScript": "file:./index.js",
     "editorStyle": "file:./index.css",
     "style": "file:./style-index.css",
-    "viewScript": "file:./header-view-script.js",
+    "viewScript": ["file:./header-view-script.js", "file:./mobile-menu.js"],
     "renderView": "header",
     "phpScript": "file:./header-view-composing.php"
 }

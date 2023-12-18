@@ -11,7 +11,7 @@ class PostRestHandler
 
     public static function registerPostRest()
     {
-        Rest::namespace('morningtrain/v1')->group(function () {
+        Rest::namespace('ma/v1')->group(function () {
             Rest::post('post-archive', function (Request $request) {
                 $searchArgs = json_decode($request->getContent(), true);
                 \wp_send_json(PostArchiveRestEndpointHandler::postArchiveSearch(...$searchArgs));

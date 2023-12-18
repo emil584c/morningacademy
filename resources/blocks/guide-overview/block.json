@@ -7,18 +7,28 @@
     "category": "morningtrain",
     "description": "A section including guides",
     "attributes": {
+        "anchor": {
+            "type": "string"
+        },      
         "mtSpacing": {
             "type": "object",
             "default": {}
+        },
+        "paragraph": {
+            "type": "string"
+        },
+        "paragraph2": {
+            "type": "string"
         }
     },
     "supports": {
-        "mtSpacing": true
+        "mtSpacing": true,
+        "anchor": true
     },
     "providesContext": {
         "button/types": "buttonTypes"
     },
-    "textdomain": "mf",
+    "textdomain": "ma",
     "editorScript": "file:./index.js",
     "editorStyle": "file:./index.css",
     "style": "file:./style-index.css",

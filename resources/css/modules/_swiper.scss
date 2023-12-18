@@ -10,7 +10,7 @@
  * Released on: January 30, 2023
  */
 
-$themeColor: #007aff !default;
+$themeColor: #FF9452 !default;
 
 @at-root {
     @font-face {
@@ -31,7 +31,7 @@ $themeColor: #007aff !default;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     list-style: none;
     padding: 0;
     /* Fix of Webkit flickering */
@@ -242,7 +242,6 @@ $themeColor: #007aff !default;
 }
 
 .swiper-pagination {
-    position: absolute;
     text-align: center;
     transition: 300ms opacity;
     transform: translate3d(0, 0, 0);
@@ -304,8 +303,8 @@ $themeColor: #007aff !default;
 }
 
 .swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
-    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+    width: 8px;
+    height: 8px;
     display: inline-block;
     border-radius: 50%;
     background: var(--swiper-pagination-bullet-inactive-color, #000);

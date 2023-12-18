@@ -4,8 +4,8 @@
 }
 
 .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
+    width: 8px;
+    height: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,4 +26,26 @@
 
 .swiper-pagination-lock {
     display: none !important;
+}
+
+
+.swiper-pagination {
+	width: auto !important;
+	left: auto !important;
+    margin-top: 32px;
+}
+.swiper-pagination-bullet {
+	border-radius: 0;
+	width: auto;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 12px;
+	color:#000;
+	opacity: 1;
+	background: rgba(0,0,0,0.2);
+}
+.swiper-pagination-bullet-active {
+	color:#fff;
+	background: #007aff;
 }
